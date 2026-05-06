@@ -30,7 +30,10 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
-    
+
+    <!-- Devicon CDN for tech stack icons -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+
     <!-- EmailJS CDN -->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     
@@ -49,8 +52,8 @@
     <script src="smooth-scroll.js" defer></script>
     <script src="cursor-trail.js" defer></script>
     <script src="form-handler.js" defer></script>
-    <script src="skills-animation.js" defer></script>
-    
+    <script src="project-flip.js" defer></script>
+        
     <title>johenworks</title>
   </head>
   <body>
@@ -151,97 +154,61 @@
       <div class="fullpage-section">
         <div class="fullpage-section__content">
           <section class="skills">
-        <div class="wrapper skills__wrapper bottom-border">
+        <div class="wrapper skills__wrapper">
           <h2 class="skills__headline header-xl">Tech Stack</h2>
           <div class="skills__item">
-            <div class="skills__header">
-              <h3 class="skills__title">HTML</h3>
-              <span class="skills__percentage">95%</span>
-            </div>
-            <div class="skills__bar">
-              <div class="skills__progress" data-progress="95"></div>
-            </div>
+            <h3 class="skills__title"><i class="devicon-html5-plain colored skills__icon"></i>HTML</h3>
           </div>
           <div class="skills__item">
-            <div class="skills__header">
-              <h3 class="skills__title">CSS</h3>
-              <span class="skills__percentage">90%</span>
-            </div>
-            <div class="skills__bar">
-              <div class="skills__progress" data-progress="90"></div>
-            </div>
+            <h3 class="skills__title"><i class="devicon-css3-plain colored skills__icon"></i>CSS</h3>
           </div>
           <div class="skills__item">
-            <div class="skills__header">
-              <h3 class="skills__title">JavaScript</h3>
-              <span class="skills__percentage">85%</span>
-            </div>
-            <div class="skills__bar">
-              <div class="skills__progress" data-progress="85"></div>
-            </div>
+            <h3 class="skills__title"><i class="devicon-javascript-plain colored skills__icon"></i>JavaScript</h3>
           </div>
           <div class="skills__item">
-            <div class="skills__header">
-              <h3 class="skills__title">React</h3>
-              <span class="skills__percentage">75%</span>
-            </div>
-            <div class="skills__bar">
-              <div class="skills__progress" data-progress="75"></div>
-            </div>
+            <h3 class="skills__title"><i class="devicon-react-original colored skills__icon"></i>React</h3>
           </div>
           <div class="skills__item">
-            <div class="skills__header">
-              <h3 class="skills__title">TailwindCSS</h3>
-              <span class="skills__percentage">88%</span>
-            </div>
-            <div class="skills__bar">
-              <div class="skills__progress" data-progress="88"></div>
-            </div>
+            <h3 class="skills__title"><i class="devicon-tailwindcss-original colored skills__icon"></i>TailwindCSS</h3>
           </div>
           <div class="skills__item">
-            <div class="skills__header">
-              <h3 class="skills__title">MySQL</h3>
-              <span class="skills__percentage">80%</span>
-            </div>
-            <div class="skills__bar">
-              <div class="skills__progress" data-progress="80"></div>
-            </div>
+            <h3 class="skills__title"><i class="devicon-mysql-plain colored skills__icon"></i>MySQL</h3>
           </div>
           <div class="skills__item">
-            <div class="skills__header">
-              <h3 class="skills__title">PostgreSQL</h3>
-              <span class="skills__percentage">78%</span>
-            </div>
-            <div class="skills__bar">
-              <div class="skills__progress" data-progress="78"></div>
-            </div>
+            <h3 class="skills__title"><i class="devicon-postgresql-plain colored skills__icon"></i>PostgreSQL</h3>
           </div>
           <div class="skills__item">
-            <div class="skills__header">
-              <h3 class="skills__title">REST API</h3>
-              <span class="skills__percentage">82%</span>
-            </div>
-            <div class="skills__bar">
-              <div class="skills__progress" data-progress="82"></div>
-            </div>
+            <h3 class="skills__title"><i class="devicon-nodejs-plain colored skills__icon"></i>REST API</h3>
           </div>
           <div class="skills__item">
-            <div class="skills__header">
-              <h3 class="skills__title">Git</h3>
-              <span class="skills__percentage">85%</span>
-            </div>
-            <div class="skills__bar">
-              <div class="skills__progress" data-progress="85"></div>
-            </div>
+            <h3 class="skills__title"><i class="devicon-git-plain colored skills__icon"></i>Git</h3>
           </div>
           <div class="skills__item">
-            <div class="skills__header">
-              <h3 class="skills__title">Figma</h3>
-              <span class="skills__percentage">72%</span>
-            </div>
-            <div class="skills__bar">
-              <div class="skills__progress" data-progress="72"></div>
-            </div>
+            <h3 class="skills__title"><i class="devicon-figma-plain colored skills__icon"></i>Figma</h3>
+          </div>
+          <div class="skills__item">
+            <h3 class="skills__title"><i class="devicon-selenium-original colored skills__icon"></i>Selenium</h3>
+          </div>
+          <div class="skills__item">
+            <h3 class="skills__title"><i class="devicon-docker-plain colored skills__icon"></i>Docker</h3>
+          </div>
+          <div class="skills__item">
+            <h3 class="skills__title"><i class="devicon-python-plain colored skills__icon"></i>Python</h3>
+          </div>
+          <div class="skills__item">
+            <h3 class="skills__title"><i class="devicon-mongodb-plain colored skills__icon"></i>MongoDB</h3>
+          </div>
+          <div class="skills__item">
+            <h3 class="skills__title"><i class="devicon-bootstrap-plain colored skills__icon"></i>Bootstrap</h3>
+          </div>
+          <div class="skills__item">
+            <h3 class="skills__title"><i class="devicon-nodejs-plain colored skills__icon"></i>Node</h3>
+          </div>
+          <div class="skills__item">
+            <h3 class="skills__title"><i class="devicon-php-plain colored skills__icon"></i>PHP</h3>
+          </div>
+          <div class="skills__item">
+            <h3 class="skills__title"><i class="devicon-wordpress-plain colored skills__icon"></i>WordPress</h3>
           </div>
         </div>
       </section>
@@ -255,157 +222,291 @@
           <div class="projects__grid">
             <h3 class="projects__headline header-xl">Projects</h3>
 
-            <div class="projects__item">
-              <picture class="projects__picture">
-                <source
-                  media="(min-width: 62.5em)"
-                  srcset="./assets/images/thumbnail-project-1-large.webp"
-                />
-                <img
-                  class="projects__image"
-                  src="./assets/images/thumbnail-project-1-small.webp"
-                  alt="screenshot of design portfolio website"
-                  width-="343"
-                  height="253"
-                />
-              </picture>
-              <h3 class="projects__name">Design Portfolio</h3>
-              <p class="projects__tags">
-                <span>HTML</span>
-                <span>CSS</span>
-              </p>
-              <div class="projects__links">
-                <a href="#" class="underline">View Project</a>
-                <a href="#" class="underline">View Code</a>
+            <div class="projects__item projects__item--flip" data-flip>
+              <div class="projects__flipper">
+                <div class="projects__face projects__face--front">
+                  <picture class="projects__picture">
+                    <source
+                      media="(min-width: 62.5em)"
+                      srcset="./assets/images/pomodoro.webp"
+                    />
+                    <img
+                      class="projects__image"
+                      src="./assets/images/pomodoro.webp"
+                      alt="screenshot of Pomodoro For Rona website"
+                      width-="343"
+                      height="253"
+                    />
+                  </picture>
+                  <h3 class="projects__name">Pomodoro For Rona</h3>
+                  <p class="projects__tags">
+                    <i class="devicon-html5-plain colored"></i>
+                    <i class="devicon-css3-plain colored"></i>
+                    <i class="devicon-javascript-plain colored"></i>
+                  </p>
+                  <div class="projects__links">
+                    <a href="#" class="underline">View Project</a>
+                    <a href="#" class="underline">View Code</a>
+                  </div>
+                  <div class="projects__flip-hint">
+                    <span>Click to see details</span>
+                  </div>
+                </div>
+                <div class="projects__face projects__face--back">
+                  <h3 class="projects__name">Pomodoro For Rona</h3>
+                  <p class="projects__summary">
+                    A productivity-focused Pomodoro timer built with vanilla JavaScript. 
+                    Features customizable work and break intervals, session tracking, 
+                    audio alerts, and a sleek dark UI optimized for focused work sessions.
+                  </p>
+                  <div class="projects__links">
+                    <a href="#" class="underline">View Project</a>
+                    <a href="#" class="underline">View Code</a>
+                  </div>
+                  <div class="projects__flip-hint">
+                    <span>Click to flip back</span>
+                  </div>
+                </div>
               </div>
             </div>
 
-            <div class="projects__item">
-              <picture class="projects__picture">
-                <source
-                  media="(min-width: 62.5em)"
-                  srcset="./assets/images/thumbnail-project-2-large.webp"
-                />
-                <img
-                  class="projects__image"
-                  src="./assets/images/thumbnail-project-2-small.webp"
-                  alt="screenshot of learning platform website with different courses"
-                  width-="343"
-                  height="253"
-                />
-              </picture>
-              <h3 class="projects__name">E-Learning Landing Page</h3>
-              <p class="projects__tags">
-                <span>HTML</span>
-                <span>CSS</span>
-              </p>
-              <div class="projects__links">
-                <a href="#" class="underline">View Project</a>
-                <a href="#" class="underline">View Code</a>
+            <div class="projects__item projects__item--flip" data-flip>
+              <div class="projects__flipper">
+                <div class="projects__face projects__face--front">
+                  <picture class="projects__picture">
+                    <source
+                      media="(min-width: 62.5em)"
+                      srcset="./assets/images/thumbnail-project-2-large.webp"
+                    />
+                    <img
+                      class="projects__image"
+                      src="./assets/images/thumbnail-project-2-small.webp"
+                      alt="screenshot of learning platform website with different courses"
+                      width-="343"
+                      height="253"
+                    />
+                  </picture>
+                  <h3 class="projects__name">E-Learning Landing Page</h3>
+                  <p class="projects__tags">
+                    <i class="devicon-html5-plain colored"></i>
+                    <i class="devicon-css3-plain colored"></i>
+                    <i class="devicon-javascript-plain colored"></i>
+                  </p>
+                  <div class="projects__links">
+                    <a href="#" class="underline">View Project</a>
+                    <a href="#" class="underline">View Code</a>
+                  </div>
+                  <div class="projects__flip-hint">
+                    <span>Click to see details</span>
+                  </div>
+                </div>
+                <div class="projects__face projects__face--back">
+                  <h3 class="projects__name">E-Learning Landing Page</h3>
+                  <p class="projects__summary">
+                    A modern landing page for an online learning platform featuring course 
+                    categorization, featured courses showcase, instructor profiles, and 
+                    interactive call-to-action sections.
+                  </p>
+                  <div class="projects__links">
+                    <a href="#" class="underline">View Project</a>
+                    <a href="#" class="underline">View Code</a>
+                  </div>
+                  <div class="projects__flip-hint">
+                    <span>Click to flip back</span>
+                  </div>
+                </div>
               </div>
             </div>
 
-            <div class="projects__item">
-              <picture class="projects__picture">
-                <source
-                  media="(min-width: 62.5em)"
-                  srcset="./assets/images/thumbnail-project-3-large.webp"
-                />
-                <img
-                  class="projects__image"
-                  src="./assets/images/thumbnail-project-3-small.webp"
-                  alt="screenshot of To Do App showing a list of active and complete tasks"
-                  width-="343"
-                  height="253"
-                />
-              </picture>
-              <h3 class="projects__name">Todo Web App</h3>
-              <p class="projects__tags">
-                <span>HTML</span>
-                <span>CSS</span>
-                <span>JavaScript</span>
-              </p>
-              <div class="projects__links">
-                <a href="#" class="underline">View Project</a>
-                <a href="#" class="underline">View Code</a>
+            <div class="projects__item projects__item--flip" data-flip>
+              <div class="projects__flipper">
+                <div class="projects__face projects__face--front">
+                  <picture class="projects__picture">
+                    <source
+                      media="(min-width: 62.5em)"
+                      srcset="./assets/images/thumbnail-project-3-large.webp"
+                    />
+                    <img
+                      class="projects__image"
+                      src="./assets/images/thumbnail-project-3-small.webp"
+                      alt="screenshot of To Do App showing a list of active and complete tasks"
+                      width-="343"
+                      height="253"
+                    />
+                  </picture>
+                  <h3 class="projects__name">Todo Web App</h3>
+                  <p class="projects__tags">
+                    <i class="devicon-html5-plain colored"></i>
+                    <i class="devicon-css3-plain colored"></i>
+                    <i class="devicon-javascript-plain colored"></i>
+                  </p>
+                  <div class="projects__links">
+                    <a href="#" class="underline">View Project</a>
+                    <a href="#" class="underline">View Code</a>
+                  </div>
+                  <div class="projects__flip-hint">
+                    <span>Click to see details</span>
+                  </div>
+                </div>
+                <div class="projects__face projects__face--back">
+                  <h3 class="projects__name">Todo Web App</h3>
+                  <p class="projects__summary">
+                    A task management application with add, edit, delete, and mark-complete 
+                    functionality. Features local storage persistence, task filtering, and 
+                    a clean responsive interface.
+                  </p>
+                  <div class="projects__links">
+                    <a href="#" class="underline">View Project</a>
+                    <a href="#" class="underline">View Code</a>
+                  </div>
+                  <div class="projects__flip-hint">
+                    <span>Click to flip back</span>
+                  </div>
+                </div>
               </div>
             </div>
 
-            <div class="projects__item">
-              <picture class="projects__picture">
-                <source
-                  media="(min-width: 62.5em)"
-                  srcset="./assets/images/thumbnail-project-4-large.webp"
-                />
-                <img
-                  class="projects__image"
-                  src="./assets/images/thumbnail-project-4-small.webp"
-                  alt="screenshot of video player app with grid of thumbnails of movies and TV shows"
-                  width-="343"
-                  height="253"
-                />
-              </picture>
-              <h3 class="projects__name">Entertainment Web App</h3>
-              <p class="projects__tags">
-                <span>HTML</span>
-                <span>CSS</span>
-                <span>JavaScript</span>
-              </p>
-              <div class="projects__links">
-                <a href="#" class="underline">View Project</a>
-                <a href="#" class="underline">View Code</a>
+            <div class="projects__item projects__item--flip" data-flip>
+              <div class="projects__flipper">
+                <div class="projects__face projects__face--front">
+                  <picture class="projects__picture">
+                    <source
+                      media="(min-width: 62.5em)"
+                      srcset="./assets/images/thumbnail-project-4-large.webp"
+                    />
+                    <img
+                      class="projects__image"
+                      src="./assets/images/thumbnail-project-4-small.webp"
+                      alt="screenshot of video player app with grid of thumbnails of movies and TV shows"
+                      width-="343"
+                      height="253"
+                    />
+                  </picture>
+                  <h3 class="projects__name">Entertainment Web App</h3>
+                  <p class="projects__tags">
+                    <i class="devicon-html5-plain colored"></i>
+                    <i class="devicon-css3-plain colored"></i>
+                    <i class="devicon-javascript-plain colored"></i>
+                  </p>
+                  <div class="projects__links">
+                    <a href="#" class="underline">View Project</a>
+                    <a href="#" class="underline">View Code</a>
+                  </div>
+                  <div class="projects__flip-hint">
+                    <span>Click to see details</span>
+                  </div>
+                </div>
+                <div class="projects__face projects__face--back">
+                  <h3 class="projects__name">Entertainment Web App</h3>
+                  <p class="projects__summary">
+                    A media streaming interface featuring movie and TV show browsing with 
+                    category filtering, search functionality, and a responsive grid layout 
+                    with hover previews and detailed information cards.
+                  </p>
+                  <div class="projects__links">
+                    <a href="#" class="underline">View Project</a>
+                    <a href="#" class="underline">View Code</a>
+                  </div>
+                  <div class="projects__flip-hint">
+                    <span>Click to flip back</span>
+                  </div>
+                </div>
               </div>
             </div>
 
-            <div class="projects__item">
-              <picture class="projects__picture">
-                <source
-                  media="(min-width: 62.5em)"
-                  srcset="./assets/images/thumbnail-project-5-large.webp"
-                />
-                <img
-                  class="projects__image"
-                  src="./assets/images/thumbnail-project-5-small.webp"
-                  alt="screenshot of 4-player memory game with circular tiles that have symbols"
-                  width-="343"
-                  height="253"
-                />
-              </picture>
-              <h3 class="projects__name">Memory Game</h3>
-              <p class="projects__tags">
-                <span>HTML</span>
-                <span>CSS</span>
-                <span>JavaScript</span>
-              </p>
-              <div class="projects__links">
-                <a href="#" class="underline">View Project</a>
-                <a href="#" class="underline">View Code</a>
+            <div class="projects__item projects__item--flip" data-flip>
+              <div class="projects__flipper">
+                <div class="projects__face projects__face--front">
+                  <picture class="projects__picture">
+                    <source
+                      media="(min-width: 62.5em)"
+                      srcset="./assets/images/thumbnail-project-5-large.webp"
+                    />
+                    <img
+                      class="projects__image"
+                      src="./assets/images/thumbnail-project-5-small.webp"
+                      alt="screenshot of 4-player memory game with circular tiles that have symbols"
+                      width-="343"
+                      height="253"
+                    />
+                  </picture>
+                  <h3 class="projects__name">Memory Game</h3>
+                  <p class="projects__tags">
+                    <i class="devicon-html5-plain colored"></i>
+                    <i class="devicon-css3-plain colored"></i>
+                    <i class="devicon-javascript-plain colored"></i>
+                  </p>
+                  <div class="projects__links">
+                    <a href="#" class="underline">View Project</a>
+                    <a href="#" class="underline">View Code</a>
+                  </div>
+                  <div class="projects__flip-hint">
+                    <span>Click to see details</span>
+                  </div>
+                </div>
+                <div class="projects__face projects__face--back">
+                  <h3 class="projects__name">Memory Game</h3>
+                  <p class="projects__summary">
+                    A classic card-matching memory game with multiple difficulty levels, 
+                    move counter, timer, and score tracking. Features smooth flip animations 
+                    and a restart functionality.
+                  </p>
+                  <div class="projects__links">
+                    <a href="#" class="underline">View Project</a>
+                    <a href="#" class="underline">View Code</a>
+                  </div>
+                  <div class="projects__flip-hint">
+                    <span>Click to flip back</span>
+                  </div>
+                </div>
               </div>
             </div>
 
-            <div class="projects__item">
-              <picture class="projects__picture">
-                <source
-                  media="(min-width: 62.5em)"
-                  srcset="./assets/images/thumbnail-project-6-large.webp"
-                />
-                <img
-                  class="projects__image"
-                  src="./assets/images/thumbnail-project-6-small.webp"
-                  alt="grid of thumbnails of famous works of art"
-                  width-="343"
-                  height="253"
-                />
-              </picture>
-              <h3 class="projects__name">Art Gallery Showcase</h3>
-              <p class="projects__tags">
-                <span>HTML</span>
-                <span>CSS</span>
-                <span>JavaScript</span>
-              </p>
-              <div class="projects__links">
-                <a href="#" class="underline">View Project</a>
-                <a href="#" class="underline">View Code</a>
+            <div class="projects__item projects__item--flip" data-flip>
+              <div class="projects__flipper">
+                <div class="projects__face projects__face--front">
+                  <picture class="projects__picture">
+                    <source
+                      media="(min-width: 62.5em)"
+                      srcset="./assets/images/thumbnail-project-6-large.webp"
+                    />
+                    <img
+                      class="projects__image"
+                      src="./assets/images/thumbnail-project-6-small.webp"
+                      alt="grid of thumbnails of famous works of art"
+                      width-="343"
+                      height="253"
+                    />
+                  </picture>
+                  <h3 class="projects__name">Art Gallery Showcase</h3>
+                  <p class="projects__tags">
+                    <i class="devicon-html5-plain colored"></i>
+                    <i class="devicon-css3-plain colored"></i>
+                    <i class="devicon-javascript-plain colored"></i>
+                  </p>
+                  <div class="projects__links">
+                    <a href="#" class="underline">View Project</a>
+                    <a href="#" class="underline">View Code</a>
+                  </div>
+                  <div class="projects__flip-hint">
+                    <span>Click to see details</span>
+                  </div>
+                </div>
+                <div class="projects__face projects__face--back">
+                  <h3 class="projects__name">Art Gallery Showcase</h3>
+                  <p class="projects__summary">
+                    A digital art gallery featuring a responsive grid of artwork with 
+                    lightbox viewing, artist information, and category filtering. Includes 
+                    smooth transitions and an elegant dark theme.
+                  </p>
+                  <div class="projects__links">
+                    <a href="#" class="underline">View Project</a>
+                    <a href="#" class="underline">View Code</a>
+                  </div>
+                  <div class="projects__flip-hint">
+                    <span>Click to flip back</span>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

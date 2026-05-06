@@ -87,8 +87,6 @@ class SkillsAnimation {
           progressBar.style.transform = `scaleX(${scaleValue}) translateZ(0)`;
         });
         
-        // Animate number count
-        this.animateNumber(item, progress);
       });
       
       // Re-enable scroll after animation completes
@@ -99,32 +97,6 @@ class SkillsAnimation {
     }, 1500);
   }
   
-  animateNumber(item, targetProgress) {
-    const percentageElement = item.querySelector('.skills__percentage');
-    const duration = 3750; // 3.75 seconds to match bar animation
-    const startTime = performance.now();
-    const startValue = 0;
-    const endValue = parseInt(targetProgress);
-    
-    const animate = (currentTime) => {
-      const elapsed = currentTime - startTime;
-      const progress = Math.min(elapsed / duration, 1);
-      
-      // Easing function (ease-out)
-      const easeOut = 1 - Math.pow(1 - progress, 3);
-      const currentValue = Math.floor(startValue + (endValue - startValue) * easeOut);
-      
-      percentageElement.textContent = `${currentValue}%`;
-      
-      if (progress < 1) {
-        requestAnimationFrame(animate);
-      } else {
-        percentageElement.textContent = `${endValue}%`;
-      }
-    };
-    
-    requestAnimationFrame(animate);
-  }
 }
 
 // Initialize when DOM is loaded
