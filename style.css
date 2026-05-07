@@ -1402,8 +1402,8 @@ h1 > span {
 
 .projects__grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 12px;
+  grid-template-columns: 1fr;
+  gap: 16px;
   justify-items: center;
   text-align: center;
   max-width: 100%;
@@ -1449,9 +1449,10 @@ h1 > span {
 }
 
 .projects__image {
-  max-height: 110px;
   width: 100%;
+  max-height: 140px;
   object-fit: cover;
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .projects__picture::before {
@@ -1472,11 +1473,6 @@ h1 > span {
   opacity: 1;
 }
 
-.projects__image {
-  width: 100%;
-  height: auto;
-  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-}
 
 .projects__item:hover .projects__image {
   transform: scale(1.05);
@@ -1558,6 +1554,7 @@ h1 > span {
   backdrop-filter: none;
   -webkit-backdrop-filter: none;
   overflow: visible;
+  min-height: 320px;
 }
 
 .projects__flipper {
@@ -1683,11 +1680,20 @@ h1 > span {
 
 @media (min-width: 37.5em) {
   .projects__grid {
-    gap: 16px 12px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px 16px;
   }
 
   .projects__headline {
     margin-block-end: 16px;
+  }
+
+  .projects__image {
+    max-height: 160px;
+  }
+
+  .projects__item--flip {
+    min-height: 360px;
   }
 
   .projects__contact {
@@ -1712,17 +1718,21 @@ h1 > span {
 @media (min-width: 62.5em) {
   .projects__grid {
     grid-template-columns: repeat(3, 1fr);
-    gap: 16px 12px;
+    gap: 20px 16px;
+  }
+
+  .projects__image {
+    max-height: 130px;
+  }
+
+  .projects__item--flip {
+    min-height: 340px;
   }
 
   .projects__item:not(.projects__item--flip) {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(4, auto);
-  }
-
-  .projects__item--flip {
-    display: block;
   }
 
   .projects__picture {
@@ -1742,24 +1752,19 @@ h1 > span {
     transition: opacity 150ms ease-in-out;
   }
 
-  .projects__item:hover .projects__picture::after {
+  .projects__item:not(.projects__item--flip):hover .projects__picture::after {
     opacity: 0.5;
   }
 
-  .projects__item:hover .projects__links {
+  .projects__item:not(.projects__item--flip):hover .projects__links {
     opacity: 1;
   }
-  .projects__item:focus-within .projects__links {
+  .projects__item:not(.projects__item--flip):focus-within .projects__links {
     opacity: 1;
   }
 
-  .projects__item:focus-within .projects__picture::after {
+  .projects__item:not(.projects__item--flip):focus-within .projects__picture::after {
     opacity: 0.5;
-  }
-
-  .projects__image {
-    width: 100%;
-    height: auto;
   }
 
   .projects__links {
@@ -1770,6 +1775,16 @@ h1 > span {
     z-index: 1;
     opacity: 0;
     transition: opacity 400ms ease-in-out;
+  }
+
+  .projects__item--flip .projects__links {
+    opacity: 1;
+    position: relative;
+    grid-column: auto;
+    grid-row: auto;
+    justify-self: auto;
+    align-self: auto;
+    z-index: auto;
   }
 
   .projects__links:hover ~ .projects__picture::after {
