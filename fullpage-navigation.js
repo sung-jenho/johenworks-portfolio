@@ -168,29 +168,44 @@ class FullPageNavigation {
   createNavigationDots() {
     const nav = document.createElement('nav');
     nav.className = 'fullpage-nav';
-    
+
+    const sectionNames = ['Home', 'Tech Stack', 'Projects', 'About Me', 'Experience', 'Contact'];
+
     this.sections.forEach((section, index) => {
+      const dotWrapper = document.createElement('div');
+      dotWrapper.className = 'fullpage-nav__item';
+
       const dot = document.createElement('button');
       dot.className = 'fullpage-nav__dot';
-      dot.setAttribute('aria-label', `Go to section ${index + 1}`);
-      
+      dot.setAttribute('aria-label', `Go to ${sectionNames[index] || `section ${index + 1}`}`);
+
+      const label = document.createElement('span');
+      label.className = 'fullpage-nav__label';
+      label.textContent = sectionNames[index] || `Section ${index + 1}`;
+
       if (index === 0) {
         dot.classList.add('active');
+        dotWrapper.classList.add('active');
       }
-      
+
       dot.addEventListener('click', () => this.goToSection(index));
-      nav.appendChild(dot);
+      dotWrapper.appendChild(label);
+      dotWrapper.appendChild(dot);
+      nav.appendChild(dotWrapper);
     });
-    
+
     document.body.appendChild(nav);
   }
   
   updateNavigationDots(activeIndex) {
-    const dots = document.querySelectorAll('.fullpage-nav__dot');
-    dots.forEach((dot, index) => {
+    const items = document.querySelectorAll('.fullpage-nav__item');
+    items.forEach((item, index) => {
+      const dot = item.querySelector('.fullpage-nav__dot');
       if (index === activeIndex) {
+        item.classList.add('active');
         dot.classList.add('active');
       } else {
+        item.classList.remove('active');
         dot.classList.remove('active');
       }
     });
