@@ -59,8 +59,12 @@ class FullPageNavigation {
   }
 
   handleTouchMove(e) {
-    // Prevent pull-to-refresh when at the top
-    if (this.currentSection === 0 && e.touches[0].clientY > this.touchStartY) {
+    // Prevent all overscroll/pull-to-refresh gestures
+    const touchY = e.touches[0].clientY;
+    const deltaY = touchY - this.touchStartY;
+
+    // Prevent pull-down (pull-to-refresh) gesture
+    if (deltaY > 0) {
       e.preventDefault();
     }
   }
