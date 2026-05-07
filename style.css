@@ -1312,7 +1312,7 @@ h1 > span {
 .skills__wrapper {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
+  gap: 12px;
   padding-block: 40px;
   transform: translateZ(0);
 }
@@ -1326,11 +1326,12 @@ h1 > span {
 
 .skills__item {
   text-align: center;
-  padding: 16px;
-  border-radius: 12px;
+  padding: 10px 8px;
+  border-radius: 10px;
   background: var(--card-bg);
   border: 1px solid var(--card-border);
   transition: all 0.3s ease;
+  min-width: 0;
 }
 
 .skills__item:hover {
@@ -1344,13 +1345,13 @@ h1 > span {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 12px;
-  font-size: 1.125rem;
-  font-size: clamp(1.125rem, 1rem + 0.5vw, 1.5rem);
-  line-height: 1.17;
+  gap: 8px;
+  font-size: clamp(0.8rem, 0.7rem + 0.5vw, 1.1rem);
+  line-height: 1.2;
   margin: 0;
   font-weight: 700;
   color: var(--text1);
+  white-space: nowrap;
 }
 
 .skills__icon {
@@ -1398,7 +1399,8 @@ h1 > span {
 
 @media (min-width: 37.5em) {
   .skills__wrapper {
-    gap: 30px;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
     padding-block: 52px 0;
   }
 
@@ -1409,7 +1411,8 @@ h1 > span {
 
 @media (min-width: 62.5em) {
   .skills__wrapper {
-    gap: 40px 30px;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
     padding-block-start: 72px;
   }
 
