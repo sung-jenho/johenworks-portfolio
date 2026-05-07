@@ -825,6 +825,30 @@ footer .theme-toggle {
   color: var(--text1);
   text-decoration: none;
   margin-right: 0;
+  position: relative;
+  display: inline-block;
+}
+
+.header__home-lottie {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 140px;
+  height: 140px;
+  pointer-events: none;
+  z-index: -1;
+  opacity: 0.6;
+}
+
+[data-theme="dark"] .header__home-lottie {
+  filter: brightness(0) invert(1);
+  opacity: 0.4;
+}
+
+.header__home-text {
+  position: relative;
+  z-index: 1;
 }
 
 .header__social > svg > path {
@@ -1005,6 +1029,8 @@ h1 > span {
 
 .typing-text {
   display: inline-block;
+  font-size: clamp(0.875rem, 0.875rem + 0.5vw, 1.25rem);
+  color: var(--text2);
 }
 
 .typing-cursor {
@@ -1196,53 +1222,80 @@ h1 > span {
   margin-block-start: 0;
 }
 
-/* TESTIMONIALS SECTION */
+/* WORK EXPERIENCE SECTION */
 
-.testimonials {
+.experience {
   padding-block: 60px;
   background-color: var(--bg-less-dark);
 }
 
-.testimonials__wrapper {
+.experience__wrapper {
   max-width: 70rem;
 }
 
-.testimonials__headline {
+.experience__headline {
   margin-block-end: 48px;
   text-align: center;
 }
 
-.testimonials__grid {
+.experience__grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 30px;
 }
 
-.testimonial__item {
-  background-color: var(--bg-body);
+.experience__item {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
   padding: 32px;
-  border-radius: 8px;
-  border-left: 4px solid var(--accent);
+  border-radius: 10px;
+  transition: all 0.3s ease;
 }
 
-.testimonial__quote {
-  font-size: 1.125rem;
-  line-height: 1.625;
-  color: var(--text2);
-  margin-block-end: 24px;
-  font-style: italic;
+.experience__item:hover {
+  background: var(--card-hover-bg);
+  border-color: rgba(78, 255, 166, 0.2);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px var(--shadow-color);
 }
 
-.testimonial__name {
-  font-size: 1.125rem;
+.experience__header {
+  margin-block-end: 20px;
+}
+
+.experience__title {
+  font-size: 1.25rem;
   font-weight: 700;
   color: var(--text1);
+  margin-block-end: 6px;
+}
+
+.experience__company {
+  font-size: 1rem;
+  color: var(--text2);
   margin-block-end: 4px;
 }
 
-.testimonial__role {
+.experience__period {
   font-size: 0.875rem;
+  color: var(--accent);
+  margin-block-end: 0;
+}
+
+.experience__duties {
+  list-style: disc;
+  padding-inline-start: 20px;
+  margin-block: 0;
+}
+
+.experience__duties li {
+  font-size: 1rem;
+  line-height: 1.625;
   color: var(--text2);
+  margin-block-end: 8px;
+}
+
+.experience__duties li:last-child {
   margin-block-end: 0;
 }
 
@@ -1253,7 +1306,7 @@ h1 > span {
     padding-block: 80px;
   }
 
-  .testimonials {
+  .experience {
     padding-block: 80px;
   }
 }
@@ -1267,7 +1320,7 @@ h1 > span {
     margin-block-end: 60px;
   }
 
-  .testimonials {
+  .experience {
     padding-block: 100px;
   }
 }
