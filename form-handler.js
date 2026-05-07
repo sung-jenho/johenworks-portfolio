@@ -161,7 +161,7 @@ class FormHandler {
       await animationPromise;
       
       // Show success message
-      this.showToast('Message sent successfully! I\'ll get back to you soon.', 'success');
+      this.showToast('Message sent successfully! Please wait for my response.', 'success');
       
       // Reset form
       this.form.reset();
@@ -275,7 +275,7 @@ class FormHandler {
     toast.className = `toast toast--${type}`;
     toast.innerHTML = `
       <div class="toast__content">
-        <span class="toast__icon">${type === 'success' ? '✓' : '✕'}</span>
+        ${type === 'error' ? '<span class="toast__icon">✕</span>' : ''}
         <span class="toast__message">${message}</span>
       </div>
     `;
