@@ -1671,11 +1671,19 @@ h1 > span {
   flex-direction: column;
   align-items: center;
   gap: 6px;
+  opacity: 0;
+  transform: translateY(8px);
+  transition: opacity 0.25s ease, transform 0.25s ease;
 }
 
 .projects__face--back .projects__links a {
   position: relative;
   overflow: hidden;
+}
+
+.projects__item--flip.flipped .projects__face--back .projects__links {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 @media (min-width: 37.5em) {
