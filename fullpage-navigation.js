@@ -6,27 +6,36 @@ class FullPageNavigation {
     this.isAnimating = false;
     this.touchStartY = 0;
     this.touchEndY = 0;
-    
+
     this.init();
   }
-  
+
   init() {
     // Set initial section as active
     this.sections[0].classList.add('active');
-    
+
+    // Set initial history state
+    history.replaceState({ section: 0 }, '', `#section-0`);
+
     // Mouse wheel event
     window.addEventListener('wheel', (e) => this.handleWheel(e), { passive: false });
-    
+
     // Touch events for mobile swipe
     window.addEventListener('touchstart', (e) => this.handleTouchStart(e), { passive: true });
     window.addEventListener('touchend', (e) => this.handleTouchEnd(e), { passive: true });
-    
+
+    // Prevent overscroll/pull-to-refresh
+    window.addEventListener('touchmove', (e) => this.handleTouchMove(e), { passive: false });
+
     // Keyboard navigation
     window.addEventListener('keydown', (e) => this.handleKeyboard(e));
-    
+
+    // Browser back/forward navigation
+    window.addEventListener('popstate', (e) => this.handlePopState(e));
+
     // Navigation dots click
     this.createNavigationDots();
-    
+
     // Prevent default scroll
     document.body.style.overflow = 'hidden';
   }
@@ -48,7 +57,14 @@ class FullPageNavigation {
   handleTouchStart(e) {
     this.touchStartY = e.touches[0].clientY;
   }
-  
+
+  handleTouchMove(e) {
+    // Prevent pull-to-refresh when at the top
+    if (this.currentSection === 0 && e.touches[0].clientY > this.touchStartY) {
+      e.preventDefault();
+    }
+  }
+
   handleTouchEnd(e) {
     this.touchEndY = e.changedTouches[0].clientY;
     this.handleSwipe();
@@ -73,7 +89,7 @@ class FullPageNavigation {
   
   handleKeyboard(e) {
     if (this.isAnimating) return;
-    
+
     switch(e.key) {
       case 'ArrowDown':
       case 'PageDown':
@@ -95,19 +111,27 @@ class FullPageNavigation {
         break;
     }
   }
+
+  handlePopState(e) {
+    // Handle browser back/forward navigation
+    const state = e.state;
+    if (state && typeof state.section === 'number') {
+      this.goToSection(state.section, false);
+    }
+  }
   
-  goToSection(index) {
+  goToSection(index, pushState = true) {
     // Validate index
     if (index < 0 || index >= this.sections.length || index === this.currentSection) {
       return;
     }
-    
+
     this.isAnimating = true;
-    
+
     // Remove active class from all sections
     this.sections.forEach((section, i) => {
       section.classList.remove('active');
-      
+
       // Add 'previous' class to sections before the target index
       if (i < index) {
         section.classList.add('previous');
@@ -115,17 +139,22 @@ class FullPageNavigation {
         section.classList.remove('previous');
       }
     });
-    
+
     // Add active class to new section
     this.sections[index].classList.add('active');
     this.sections[index].classList.remove('previous');
-    
+
     // Update navigation dots
     this.updateNavigationDots(index);
-    
+
+    // Push to history for back/forward navigation
+    if (pushState) {
+      history.pushState({ section: index }, '', `#section-${index}`);
+    }
+
     // Update current section
     this.currentSection = index;
-    
+
     // Reset animation lock after transition
     setTimeout(() => {
       this.isAnimating = false;
