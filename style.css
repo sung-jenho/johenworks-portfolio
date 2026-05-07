@@ -1435,18 +1435,17 @@ h1 > span {
 .projects__grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
+  gap: 12px;
   justify-items: center;
   text-align: center;
-  margin-block-end: 20px;
   max-width: 100%;
 }
 
 .projects__headline {
   grid-column: 1 / -1;
-  margin-block-end: 20px;
+  margin-block-end: 12px;
   text-align: center;
-  font-size: clamp(2rem, 0.7rem + 5.5vw, 4rem);
+  font-size: clamp(1.5rem, 0.7rem + 3vw, 2.5rem);
 }
 
 .projects__item {
@@ -1475,10 +1474,16 @@ h1 > span {
 
 .projects__picture {
   display: block;
-  margin-block-end: 12px;
+  margin-block-end: 8px;
   overflow: hidden;
   border-radius: 8px;
   position: relative;
+}
+
+.projects__image {
+  max-height: 110px;
+  width: 100%;
+  object-fit: cover;
 }
 
 .projects__picture::before {
@@ -1510,11 +1515,11 @@ h1 > span {
 }
 
 .projects__name {
-  font-size: 1.125rem;
+  font-size: 0.9rem;
   line-height: 1.2;
   font-weight: 700;
   text-transform: uppercase;
-  margin-block-end: 6px;
+  margin-block-end: 4px;
   transition: color 0.3s ease;
 }
 
@@ -1525,10 +1530,10 @@ h1 > span {
 .projects__tags {
   display: flex;
   justify-content: center;
-  gap: 8px;
-  margin-block-end: 12px;
+  gap: 6px;
+  margin-block-end: 8px;
   text-transform: uppercase;
-  font-size: 0.875rem;
+  font-size: 0.75rem;
 }
 
 .projects__tags span,
@@ -1537,7 +1542,7 @@ h1 > span {
 }
 
 .projects__tags i {
-  font-size: 1.75rem;
+  font-size: 1.25rem;
 }
 
 .projects__item:hover .projects__tags span,
@@ -1549,7 +1554,7 @@ h1 > span {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 12px;
+  gap: 6px;
 }
 
 .projects__links a {
@@ -1634,7 +1639,7 @@ h1 > span {
   transform: rotateY(180deg);
   justify-content: center;
   align-items: center;
-  padding: 24px;
+  padding: 16px;
   text-align: center;
 }
 
@@ -1645,30 +1650,30 @@ h1 > span {
 }
 
 .projects__face--front .projects__name {
-  font-size: 1.125rem;
+  font-size: 0.9rem;
   line-height: 1.2;
   font-weight: 700;
   text-transform: uppercase;
-  margin-block-end: 6px;
+  margin-block-end: 4px;
   transition: color 0.3s ease;
-  padding-inline: 16px;
-  padding-block-start: 12px;
+  padding-inline: 12px;
+  padding-block-start: 8px;
 }
 
 .projects__face--front .projects__tags {
   display: flex;
   justify-content: center;
-  gap: 8px;
-  margin-block-end: 12px;
-  font-size: 0.875rem;
+  gap: 6px;
+  margin-block-end: 8px;
+  font-size: 0.75rem;
 }
 
 .projects__face--front .projects__links {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 12px;
-  margin-block-end: 12px;
+  gap: 6px;
+  margin-block-end: 8px;
 }
 
 .projects__face--front .projects__links a {
@@ -1677,30 +1682,30 @@ h1 > span {
 }
 
 .projects__summary {
-  font-size: 0.9375rem;
-  line-height: 1.6;
+  font-size: 0.8rem;
+  line-height: 1.4;
   color: var(--text2);
-  margin-block-end: 20px;
+  margin-block-end: 12px;
 }
 
 .projects__flip-hint {
-  font-size: 0.75rem;
+  font-size: 0.65rem;
   color: var(--text2);
   opacity: 0.6;
   text-align: center;
-  padding-block-end: 12px;
+  padding-block-end: 8px;
   margin-block-start: auto;
 }
 
 .projects__face--back .projects__name {
-  margin-block-end: 12px;
+  margin-block-end: 8px;
 }
 
 .projects__face--back .projects__links {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 12px;
+  gap: 6px;
 }
 
 .projects__face--back .projects__links a {
@@ -1710,11 +1715,11 @@ h1 > span {
 
 @media (min-width: 37.5em) {
   .projects__grid {
-    gap: 30px 20px;
+    gap: 16px 12px;
   }
 
   .projects__headline {
-    margin-block-end: 40px;
+    margin-block-end: 16px;
   }
 
   .projects__contact {
@@ -1739,13 +1744,17 @@ h1 > span {
 @media (min-width: 62.5em) {
   .projects__grid {
     grid-template-columns: repeat(3, 1fr);
-    gap: 40px 24px;
+    gap: 16px 12px;
   }
 
-  .projects__item {
+  .projects__item:not(.projects__item--flip) {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(4, auto);
+  }
+
+  .projects__item--flip {
+    display: block;
   }
 
   .projects__picture {
