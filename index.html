@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     
     <!-- SEO Meta Tags -->
     <meta name="description" content="Jenho Nacilla - Front-end Developer specializing in responsive web applications, SQL database management, and UI/UX design. Based in the Philippines." />
@@ -30,7 +30,11 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
-    
+    <link rel="icon" type="image/x-icon" href="./assets/images/title.ico" />
+
+    <!-- Devicon CDN for tech stack icons -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+
     <!-- EmailJS CDN -->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     
@@ -49,8 +53,8 @@
     <script src="smooth-scroll.js" defer></script>
     <script src="cursor-trail.js" defer></script>
     <script src="form-handler.js" defer></script>
-    <script src="skills-animation.js" defer></script>
-    
+    <script src="project-flip.js" defer></script>
+        
     <title>johenworks</title>
   </head>
   <body>
@@ -108,7 +112,8 @@
                 <nav class="header__nav">
                   <h2 class="visually-hidden">Navigation</h2>
                   <a href="/" class="header__home">
-                    johenworks
+                    <span class="header__home-lottie" data-lottie="lines"></span>
+                    <span class="header__home-text">johenworks</span>
                     <span class="visually-hidden">(to home page)</span>
                   </a>
                 </nav>
@@ -151,97 +156,67 @@
       <div class="fullpage-section">
         <div class="fullpage-section__content">
           <section class="skills">
-        <div class="wrapper skills__wrapper bottom-border">
+        <div class="wrapper skills__wrapper">
           <h2 class="skills__headline header-xl">Tech Stack</h2>
           <div class="skills__item">
-            <div class="skills__header">
-              <h3 class="skills__title">HTML</h3>
-              <span class="skills__percentage">95%</span>
-            </div>
-            <div class="skills__bar">
-              <div class="skills__progress" data-progress="95"></div>
-            </div>
+            <h3 class="skills__title"><i class="devicon-html5-plain colored skills__icon"></i>HTML</h3>
           </div>
           <div class="skills__item">
-            <div class="skills__header">
-              <h3 class="skills__title">CSS</h3>
-              <span class="skills__percentage">90%</span>
-            </div>
-            <div class="skills__bar">
-              <div class="skills__progress" data-progress="90"></div>
-            </div>
+            <h3 class="skills__title"><i class="devicon-css3-plain colored skills__icon"></i>CSS</h3>
           </div>
           <div class="skills__item">
-            <div class="skills__header">
-              <h3 class="skills__title">JavaScript</h3>
-              <span class="skills__percentage">85%</span>
-            </div>
-            <div class="skills__bar">
-              <div class="skills__progress" data-progress="85"></div>
-            </div>
+            <h3 class="skills__title"><i class="devicon-javascript-plain colored skills__icon"></i>JavaScript</h3>
           </div>
           <div class="skills__item">
-            <div class="skills__header">
-              <h3 class="skills__title">React</h3>
-              <span class="skills__percentage">75%</span>
-            </div>
-            <div class="skills__bar">
-              <div class="skills__progress" data-progress="75"></div>
-            </div>
+            <h3 class="skills__title"><i class="devicon-react-original colored skills__icon"></i>React</h3>
           </div>
           <div class="skills__item">
-            <div class="skills__header">
-              <h3 class="skills__title">TailwindCSS</h3>
-              <span class="skills__percentage">88%</span>
-            </div>
-            <div class="skills__bar">
-              <div class="skills__progress" data-progress="88"></div>
-            </div>
+            <h3 class="skills__title"><i class="devicon-tailwindcss-original colored skills__icon"></i>TailwindCSS</h3>
           </div>
           <div class="skills__item">
-            <div class="skills__header">
-              <h3 class="skills__title">MySQL</h3>
-              <span class="skills__percentage">80%</span>
-            </div>
-            <div class="skills__bar">
-              <div class="skills__progress" data-progress="80"></div>
-            </div>
+            <h3 class="skills__title"><i class="devicon-mysql-plain colored skills__icon"></i>MySQL</h3>
           </div>
           <div class="skills__item">
-            <div class="skills__header">
-              <h3 class="skills__title">PostgreSQL</h3>
-              <span class="skills__percentage">78%</span>
-            </div>
-            <div class="skills__bar">
-              <div class="skills__progress" data-progress="78"></div>
-            </div>
+            <h3 class="skills__title"><i class="devicon-postgresql-plain colored skills__icon"></i>PostgreSQL</h3>
           </div>
           <div class="skills__item">
-            <div class="skills__header">
-              <h3 class="skills__title">REST API</h3>
-              <span class="skills__percentage">82%</span>
-            </div>
-            <div class="skills__bar">
-              <div class="skills__progress" data-progress="82"></div>
-            </div>
+            <h3 class="skills__title"><i class="devicon-nodejs-plain colored skills__icon"></i>REST API</h3>
           </div>
           <div class="skills__item">
-            <div class="skills__header">
-              <h3 class="skills__title">Git</h3>
-              <span class="skills__percentage">85%</span>
-            </div>
-            <div class="skills__bar">
-              <div class="skills__progress" data-progress="85"></div>
-            </div>
+            <h3 class="skills__title"><i class="devicon-git-plain colored skills__icon"></i>Git</h3>
           </div>
           <div class="skills__item">
-            <div class="skills__header">
-              <h3 class="skills__title">Figma</h3>
-              <span class="skills__percentage">72%</span>
-            </div>
-            <div class="skills__bar">
-              <div class="skills__progress" data-progress="72"></div>
-            </div>
+            <h3 class="skills__title"><i class="devicon-figma-plain colored skills__icon"></i>Figma</h3>
+          </div>
+          <div class="skills__item">
+            <h3 class="skills__title"><i class="devicon-selenium-original colored skills__icon"></i>Selenium</h3>
+          </div>
+          <div class="skills__item">
+            <h3 class="skills__title"><i class="devicon-docker-plain colored skills__icon"></i>Docker</h3>
+          </div>
+          <div class="skills__item">
+            <h3 class="skills__title"><i class="devicon-python-plain colored skills__icon"></i>Python</h3>
+          </div>
+          <div class="skills__item">
+            <h3 class="skills__title"><i class="devicon-mongodb-plain colored skills__icon"></i>MongoDB</h3>
+          </div>
+          <div class="skills__item">
+            <h3 class="skills__title"><i class="devicon-bootstrap-plain colored skills__icon"></i>Bootstrap</h3>
+          </div>
+          <div class="skills__item">
+            <h3 class="skills__title"><i class="devicon-nodejs-plain colored skills__icon"></i>Node</h3>
+          </div>
+          <div class="skills__item">
+            <h3 class="skills__title"><i class="devicon-php-plain colored skills__icon"></i>PHP</h3>
+          </div>
+          <div class="skills__item">
+            <h3 class="skills__title"><i class="devicon-wordpress-plain colored skills__icon"></i>WordPress</h3>
+          </div>
+          <div class="skills__item">
+            <h3 class="skills__title"><i class="devicon-notion-plain skills__icon"></i>Notion</h3>
+          </div>
+          <div class="skills__item">
+            <h3 class="skills__title"><i class="devicon-github-original skills__icon"></i>GitHub</h3>
           </div>
         </div>
       </section>
@@ -255,157 +230,291 @@
           <div class="projects__grid">
             <h3 class="projects__headline header-xl">Projects</h3>
 
-            <div class="projects__item">
-              <picture class="projects__picture">
-                <source
-                  media="(min-width: 62.5em)"
-                  srcset="./assets/images/thumbnail-project-1-large.webp"
-                />
-                <img
-                  class="projects__image"
-                  src="./assets/images/thumbnail-project-1-small.webp"
-                  alt="screenshot of design portfolio website"
-                  width-="343"
-                  height="253"
-                />
-              </picture>
-              <h3 class="projects__name">Design Portfolio</h3>
-              <p class="projects__tags">
-                <span>HTML</span>
-                <span>CSS</span>
-              </p>
-              <div class="projects__links">
-                <a href="#" class="underline">View Project</a>
-                <a href="#" class="underline">View Code</a>
+            <div class="projects__item projects__item--flip" data-flip>
+              <div class="projects__flipper">
+                <div class="projects__face projects__face--front">
+                  <picture class="projects__picture">
+                    <source
+                      media="(min-width: 62.5em)"
+                      srcset="./assets/images/pomodoro.webp"
+                    />
+                    <img
+                      class="projects__image"
+                      src="./assets/images/pomodoro.webp"
+                      alt="screenshot of Pomodoro For Rona website"
+                      width-="343"
+                      height="253"
+                    />
+                  </picture>
+                  <h3 class="projects__name">Pomodoro For Rona</h3>
+                  <p class="projects__tags">
+                    <i class="devicon-html5-plain colored"></i>
+                    <i class="devicon-css3-plain colored"></i>
+                    <i class="devicon-javascript-plain colored"></i>
+                  </p>
+                  <div class="projects__links">
+                    <a href="#" class="underline">View Project</a>
+                    <a href="#" class="underline">View Code</a>
+                  </div>
+                  <div class="projects__flip-hint">
+                    <span>Click to see details</span>
+                  </div>
+                </div>
+                <div class="projects__face projects__face--back">
+                  <h3 class="projects__name">Pomodoro For Rona</h3>
+                  <p class="projects__summary">
+                    A productivity-focused Pomodoro timer built with vanilla JavaScript. 
+                    Features customizable work and break intervals, session tracking, 
+                    audio alerts, and a sleek dark UI optimized for focused work sessions.
+                  </p>
+                  <div class="projects__links">
+                    <a href="#" class="underline">View Project</a>
+                    <a href="#" class="underline">View Code</a>
+                  </div>
+                  <div class="projects__flip-hint">
+                    <span>Click to flip back</span>
+                  </div>
+                </div>
               </div>
             </div>
 
-            <div class="projects__item">
-              <picture class="projects__picture">
-                <source
-                  media="(min-width: 62.5em)"
-                  srcset="./assets/images/thumbnail-project-2-large.webp"
-                />
-                <img
-                  class="projects__image"
-                  src="./assets/images/thumbnail-project-2-small.webp"
-                  alt="screenshot of learning platform website with different courses"
-                  width-="343"
-                  height="253"
-                />
-              </picture>
-              <h3 class="projects__name">E-Learning Landing Page</h3>
-              <p class="projects__tags">
-                <span>HTML</span>
-                <span>CSS</span>
-              </p>
-              <div class="projects__links">
-                <a href="#" class="underline">View Project</a>
-                <a href="#" class="underline">View Code</a>
+            <div class="projects__item projects__item--flip" data-flip>
+              <div class="projects__flipper">
+                <div class="projects__face projects__face--front">
+                  <picture class="projects__picture">
+                    <source
+                      media="(min-width: 62.5em)"
+                      srcset="./assets/images/thumbnail-project-2-large.webp"
+                    />
+                    <img
+                      class="projects__image"
+                      src="./assets/images/thumbnail-project-2-small.webp"
+                      alt="screenshot of learning platform website with different courses"
+                      width-="343"
+                      height="253"
+                    />
+                  </picture>
+                  <h3 class="projects__name">E-Learning Landing Page</h3>
+                  <p class="projects__tags">
+                    <i class="devicon-html5-plain colored"></i>
+                    <i class="devicon-css3-plain colored"></i>
+                    <i class="devicon-javascript-plain colored"></i>
+                  </p>
+                  <div class="projects__links">
+                    <a href="#" class="underline">View Project</a>
+                    <a href="#" class="underline">View Code</a>
+                  </div>
+                  <div class="projects__flip-hint">
+                    <span>Click to see details</span>
+                  </div>
+                </div>
+                <div class="projects__face projects__face--back">
+                  <h3 class="projects__name">E-Learning Landing Page</h3>
+                  <p class="projects__summary">
+                    A modern landing page for an online learning platform featuring course 
+                    categorization, featured courses showcase, instructor profiles, and 
+                    interactive call-to-action sections.
+                  </p>
+                  <div class="projects__links">
+                    <a href="#" class="underline">View Project</a>
+                    <a href="#" class="underline">View Code</a>
+                  </div>
+                  <div class="projects__flip-hint">
+                    <span>Click to flip back</span>
+                  </div>
+                </div>
               </div>
             </div>
 
-            <div class="projects__item">
-              <picture class="projects__picture">
-                <source
-                  media="(min-width: 62.5em)"
-                  srcset="./assets/images/thumbnail-project-3-large.webp"
-                />
-                <img
-                  class="projects__image"
-                  src="./assets/images/thumbnail-project-3-small.webp"
-                  alt="screenshot of To Do App showing a list of active and complete tasks"
-                  width-="343"
-                  height="253"
-                />
-              </picture>
-              <h3 class="projects__name">Todo Web App</h3>
-              <p class="projects__tags">
-                <span>HTML</span>
-                <span>CSS</span>
-                <span>JavaScript</span>
-              </p>
-              <div class="projects__links">
-                <a href="#" class="underline">View Project</a>
-                <a href="#" class="underline">View Code</a>
+            <div class="projects__item projects__item--flip" data-flip>
+              <div class="projects__flipper">
+                <div class="projects__face projects__face--front">
+                  <picture class="projects__picture">
+                    <source
+                      media="(min-width: 62.5em)"
+                      srcset="./assets/images/thumbnail-project-3-large.webp"
+                    />
+                    <img
+                      class="projects__image"
+                      src="./assets/images/thumbnail-project-3-small.webp"
+                      alt="screenshot of To Do App showing a list of active and complete tasks"
+                      width-="343"
+                      height="253"
+                    />
+                  </picture>
+                  <h3 class="projects__name">Todo Web App</h3>
+                  <p class="projects__tags">
+                    <i class="devicon-html5-plain colored"></i>
+                    <i class="devicon-css3-plain colored"></i>
+                    <i class="devicon-javascript-plain colored"></i>
+                  </p>
+                  <div class="projects__links">
+                    <a href="#" class="underline">View Project</a>
+                    <a href="#" class="underline">View Code</a>
+                  </div>
+                  <div class="projects__flip-hint">
+                    <span>Click to see details</span>
+                  </div>
+                </div>
+                <div class="projects__face projects__face--back">
+                  <h3 class="projects__name">Todo Web App</h3>
+                  <p class="projects__summary">
+                    A task management application with add, edit, delete, and mark-complete 
+                    functionality. Features local storage persistence, task filtering, and 
+                    a clean responsive interface.
+                  </p>
+                  <div class="projects__links">
+                    <a href="#" class="underline">View Project</a>
+                    <a href="#" class="underline">View Code</a>
+                  </div>
+                  <div class="projects__flip-hint">
+                    <span>Click to flip back</span>
+                  </div>
+                </div>
               </div>
             </div>
 
-            <div class="projects__item">
-              <picture class="projects__picture">
-                <source
-                  media="(min-width: 62.5em)"
-                  srcset="./assets/images/thumbnail-project-4-large.webp"
-                />
-                <img
-                  class="projects__image"
-                  src="./assets/images/thumbnail-project-4-small.webp"
-                  alt="screenshot of video player app with grid of thumbnails of movies and TV shows"
-                  width-="343"
-                  height="253"
-                />
-              </picture>
-              <h3 class="projects__name">Entertainment Web App</h3>
-              <p class="projects__tags">
-                <span>HTML</span>
-                <span>CSS</span>
-                <span>JavaScript</span>
-              </p>
-              <div class="projects__links">
-                <a href="#" class="underline">View Project</a>
-                <a href="#" class="underline">View Code</a>
+            <div class="projects__item projects__item--flip" data-flip>
+              <div class="projects__flipper">
+                <div class="projects__face projects__face--front">
+                  <picture class="projects__picture">
+                    <source
+                      media="(min-width: 62.5em)"
+                      srcset="./assets/images/thumbnail-project-4-large.webp"
+                    />
+                    <img
+                      class="projects__image"
+                      src="./assets/images/thumbnail-project-4-small.webp"
+                      alt="screenshot of video player app with grid of thumbnails of movies and TV shows"
+                      width-="343"
+                      height="253"
+                    />
+                  </picture>
+                  <h3 class="projects__name">Entertainment Web App</h3>
+                  <p class="projects__tags">
+                    <i class="devicon-html5-plain colored"></i>
+                    <i class="devicon-css3-plain colored"></i>
+                    <i class="devicon-javascript-plain colored"></i>
+                  </p>
+                  <div class="projects__links">
+                    <a href="#" class="underline">View Project</a>
+                    <a href="#" class="underline">View Code</a>
+                  </div>
+                  <div class="projects__flip-hint">
+                    <span>Click to see details</span>
+                  </div>
+                </div>
+                <div class="projects__face projects__face--back">
+                  <h3 class="projects__name">Entertainment Web App</h3>
+                  <p class="projects__summary">
+                    A media streaming interface featuring movie and TV show browsing with 
+                    category filtering, search functionality, and a responsive grid layout 
+                    with hover previews and detailed information cards.
+                  </p>
+                  <div class="projects__links">
+                    <a href="#" class="underline">View Project</a>
+                    <a href="#" class="underline">View Code</a>
+                  </div>
+                  <div class="projects__flip-hint">
+                    <span>Click to flip back</span>
+                  </div>
+                </div>
               </div>
             </div>
 
-            <div class="projects__item">
-              <picture class="projects__picture">
-                <source
-                  media="(min-width: 62.5em)"
-                  srcset="./assets/images/thumbnail-project-5-large.webp"
-                />
-                <img
-                  class="projects__image"
-                  src="./assets/images/thumbnail-project-5-small.webp"
-                  alt="screenshot of 4-player memory game with circular tiles that have symbols"
-                  width-="343"
-                  height="253"
-                />
-              </picture>
-              <h3 class="projects__name">Memory Game</h3>
-              <p class="projects__tags">
-                <span>HTML</span>
-                <span>CSS</span>
-                <span>JavaScript</span>
-              </p>
-              <div class="projects__links">
-                <a href="#" class="underline">View Project</a>
-                <a href="#" class="underline">View Code</a>
+            <div class="projects__item projects__item--flip" data-flip>
+              <div class="projects__flipper">
+                <div class="projects__face projects__face--front">
+                  <picture class="projects__picture">
+                    <source
+                      media="(min-width: 62.5em)"
+                      srcset="./assets/images/thumbnail-project-5-large.webp"
+                    />
+                    <img
+                      class="projects__image"
+                      src="./assets/images/thumbnail-project-5-small.webp"
+                      alt="screenshot of 4-player memory game with circular tiles that have symbols"
+                      width-="343"
+                      height="253"
+                    />
+                  </picture>
+                  <h3 class="projects__name">Memory Game</h3>
+                  <p class="projects__tags">
+                    <i class="devicon-html5-plain colored"></i>
+                    <i class="devicon-css3-plain colored"></i>
+                    <i class="devicon-javascript-plain colored"></i>
+                  </p>
+                  <div class="projects__links">
+                    <a href="#" class="underline">View Project</a>
+                    <a href="#" class="underline">View Code</a>
+                  </div>
+                  <div class="projects__flip-hint">
+                    <span>Click to see details</span>
+                  </div>
+                </div>
+                <div class="projects__face projects__face--back">
+                  <h3 class="projects__name">Memory Game</h3>
+                  <p class="projects__summary">
+                    A classic card-matching memory game with multiple difficulty levels, 
+                    move counter, timer, and score tracking. Features smooth flip animations 
+                    and a restart functionality.
+                  </p>
+                  <div class="projects__links">
+                    <a href="#" class="underline">View Project</a>
+                    <a href="#" class="underline">View Code</a>
+                  </div>
+                  <div class="projects__flip-hint">
+                    <span>Click to flip back</span>
+                  </div>
+                </div>
               </div>
             </div>
 
-            <div class="projects__item">
-              <picture class="projects__picture">
-                <source
-                  media="(min-width: 62.5em)"
-                  srcset="./assets/images/thumbnail-project-6-large.webp"
-                />
-                <img
-                  class="projects__image"
-                  src="./assets/images/thumbnail-project-6-small.webp"
-                  alt="grid of thumbnails of famous works of art"
-                  width-="343"
-                  height="253"
-                />
-              </picture>
-              <h3 class="projects__name">Art Gallery Showcase</h3>
-              <p class="projects__tags">
-                <span>HTML</span>
-                <span>CSS</span>
-                <span>JavaScript</span>
-              </p>
-              <div class="projects__links">
-                <a href="#" class="underline">View Project</a>
-                <a href="#" class="underline">View Code</a>
+            <div class="projects__item projects__item--flip" data-flip>
+              <div class="projects__flipper">
+                <div class="projects__face projects__face--front">
+                  <picture class="projects__picture">
+                    <source
+                      media="(min-width: 62.5em)"
+                      srcset="./assets/images/thumbnail-project-6-large.webp"
+                    />
+                    <img
+                      class="projects__image"
+                      src="./assets/images/thumbnail-project-6-small.webp"
+                      alt="grid of thumbnails of famous works of art"
+                      width-="343"
+                      height="253"
+                    />
+                  </picture>
+                  <h3 class="projects__name">Art Gallery Showcase</h3>
+                  <p class="projects__tags">
+                    <i class="devicon-html5-plain colored"></i>
+                    <i class="devicon-css3-plain colored"></i>
+                    <i class="devicon-javascript-plain colored"></i>
+                  </p>
+                  <div class="projects__links">
+                    <a href="#" class="underline">View Project</a>
+                    <a href="#" class="underline">View Code</a>
+                  </div>
+                  <div class="projects__flip-hint">
+                    <span>Click to see details</span>
+                  </div>
+                </div>
+                <div class="projects__face projects__face--back">
+                  <h3 class="projects__name">Art Gallery Showcase</h3>
+                  <p class="projects__summary">
+                    A digital art gallery featuring a responsive grid of artwork with 
+                    lightbox viewing, artist information, and category filtering. Includes 
+                    smooth transitions and an elegant dark theme.
+                  </p>
+                  <div class="projects__links">
+                    <a href="#" class="underline">View Project</a>
+                    <a href="#" class="underline">View Code</a>
+                  </div>
+                  <div class="projects__flip-hint">
+                    <span>Click to flip back</span>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -420,30 +529,37 @@
         <div class="wrapper about__wrapper">
           <h2 class="about__headline header-xl">About Me</h2>
           <div class="about__content">
-            <div class="about__text">
-              <h3 class="about__subheading">My Journey</h3>
-              <p>
-                My journey into web development began with a curiosity about how websites work. 
-                What started as tinkering with HTML and CSS evolved into a passion for creating 
-                seamless digital experiences. Over the past year, I've immersed myself in modern 
-                web technologies, building projects that challenge me to grow and learn continuously.
-              </p>
-              
-              <h3 class="about__subheading">What Drives Me</h3>
-              <p>
-                I'm driven by the intersection of design and functionality. I believe great web 
-                applications should not only look beautiful but also be intuitive, accessible, 
-                and performant. Every project is an opportunity to craft something that makes 
-                a real difference in users' lives.
-              </p>
-              
-              <h3 class="about__subheading">My Approach</h3>
-              <p>
-                I approach problem-solving methodically: understand the challenge, research solutions, 
-                prototype quickly, and iterate based on feedback. I'm a strong believer in clean code, 
-                responsive design, and continuous learning. Whether it's debugging a complex issue or 
-                implementing a new feature, I tackle each challenge with curiosity and determination.
-              </p>
+            <div class="about__grid">
+              <div class="about__card">
+                <h3 class="about__subheading">My Journey</h3>
+                <p>
+                  The path I took towards becoming a web developer was initiated by my interest in the way websites were built.
+                  
+                  My initial dabbling with HTML and CSS turned into an obsession with crafting smooth and efficient online interactions.
+                  
+                  In the last twelve months, I have been fully engaged with the latest web technologies.
+                </p>
+              </div>
+
+              <div class="about__card">
+                <h3 class="about__subheading">What Drives Me</h3>
+                <p>
+                  It's this relationship between design and function that inspires me.
+                  
+                  I think good web apps have to be both attractive and easy to use.
+                  
+                  Each project I work on is a chance to make something that truly impacts people's lives.
+                </p>
+              </div>
+
+              <div class="about__card">
+                <h3 class="about__subheading">My Approach</h3>
+                <p>
+                  I am methodical in my problem-solving process, understanding the problem at hand, researching possible solutions, creating prototypes, and iterating.
+                   I am an advocate for writing clean code, designing with responsiveness in mind, and always learning.
+                   From fixing bugs to building new features, no task is too difficult.
+                </p>
+              </div>
             </div>
           </div>
         </div>
@@ -453,41 +569,34 @@
 
       <div class="fullpage-section">
         <div class="fullpage-section__content">
-          <section class="testimonials">
-        <div class="wrapper testimonials__wrapper">
-          <h2 class="testimonials__headline header-xl">Testimonials</h2>
-          <div class="testimonials__grid">
-            <div class="testimonial__item">
-              <p class="testimonial__quote">
-                "Jenho's attention to detail and commitment to delivering quality work is impressive. 
-                He consistently goes above and beyond to ensure the final product exceeds expectations."
-              </p>
-              <div class="testimonial__author">
-                <p class="testimonial__name">Sarah Johnson</p>
-                <p class="testimonial__role">Project Manager, Tech Solutions Inc.</p>
+          <section class="experience">
+        <div class="wrapper experience__wrapper">
+          <h2 class="experience__headline header-xl">Experiences</h2>
+          <div class="experience__grid">
+            <div class="experience__item">
+              <div class="experience__header">
+                <p class="experience__title">Software Developer Intern</p>
+                <p class="experience__company">NAP Solutions Inc.</p>
+                <p class="experience__period">Jan - June 2026</p>
               </div>
+              <ul class="experience__duties">
+                <li>Built web crawlers using Python and Selenium to extract valuable product and pricing data from multiple e-commerce platforms</li>
+                <li>Developed and integrated a CAPTCHA solver to improve scraping reliability on protected pages</li>
+                <li>Implemented AI-assisted HTML parsing to automatically detect page structures and extract key information with minimal manual rule updates</li>
+              </ul>
             </div>
-            
-            <div class="testimonial__item">
-              <p class="testimonial__quote">
-                "Working with Jenho was a great experience. His technical skills combined with 
-                excellent communication made our collaboration smooth and productive."
-              </p>
-              <div class="testimonial__author">
-                <p class="testimonial__name">Michael Chen</p>
-                <p class="testimonial__role">Senior Developer, Digital Innovations</p>
+
+            <div class="experience__item">
+              <div class="experience__header">
+                <p class="experience__title">Freelance Web Developer</p>
+                <p class="experience__company">Upwork</p>
+                <p class="experience__period">2025 - Present</p>
               </div>
-            </div>
-            
-            <div class="testimonial__item">
-              <p class="testimonial__quote">
-                "Jenho has a natural talent for understanding user needs and translating them into 
-                elegant, functional designs. A true professional who delivers results."
-              </p>
-              <div class="testimonial__author">
-                <p class="testimonial__name">Emily Rodriguez</p>
-                <p class="testimonial__role">UX Designer, Creative Studio</p>
-              </div>
+              <ul class="experience__duties">
+                <li>Designed and developed responsive, high-performance websites for diverse small business clients across multiple industries</li>
+                <li>Built custom WordPress themes and plugins from scratch, extending functionality to meet specific client requirements</li>
+                <li>Managed complete project lifecycles from initial consultation and design to final deployment and ongoing support</li>
+              </ul>
             </div>
           </div>
         </div>
@@ -502,11 +611,11 @@
           <div class="contact__text">
             <h2 class="contact__headline header-xl">Contact</h2>
             <p class="contact__description">
-              I would love to hear about your project and how I could help.
-              Please fill in the form, and I'll get back to you as soon as
-              possible.
+              Have a project in mind or simply want to connect? I'd be delighted to
+              collaborate with you. Drop me a message below and I'll get back
+              to you as soon as I can.
             </p>
-            <a href="./assets/resume.pdf" download class="contact__resume-btn">
+            <a href="./assets/images/resume.pdf" download class="contact__resume-btn">
               Download Resume
             </a>
           </div>
@@ -666,5 +775,19 @@
         </div>
       </div>
     </main>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const lottieContainer = document.querySelector('.header__home-lottie');
+        if (lottieContainer && typeof lottie !== 'undefined') {
+          lottie.loadAnimation({
+            container: lottieContainer,
+            renderer: 'svg',
+            loop: true,
+            autoplay: true,
+            path: './assets/lines.json'
+          });
+        }
+      });
+    </script>
   </body>
 </html>
