@@ -453,6 +453,7 @@ button.loading::before {
   overflow-x: hidden;
   z-index: 1;
   backface-visibility: hidden;
+  background-color: var(--bg-body);
 }
 
 .fullpage-section.active {
@@ -1968,6 +1969,7 @@ h1 > span {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  background-color: var(--bg-body);
 }
 
 .contact__wrapper {
@@ -2123,7 +2125,7 @@ h1 > span {
   padding: 16px 20px;
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 12px;
-  background: rgba(255, 255, 255, 0.03);
+  background: transparent;
   font-size: 1rem;
   line-height: 1.625;
   color: var(--text1);
