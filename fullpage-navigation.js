@@ -189,6 +189,8 @@ class FullPageNavigation {
       }
 
       dot.addEventListener('click', () => this.goToSection(index));
+      label.addEventListener('click', () => this.goToSection(index));
+      label.style.cursor = 'pointer';
       dotWrapper.appendChild(label);
       dotWrapper.appendChild(dot);
       nav.appendChild(dotWrapper);

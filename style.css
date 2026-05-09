@@ -510,7 +510,7 @@ button.loading::before {
 }
 
 .fullpage-nav__label {
-  font-size: 0.75rem;
+  font-size: 0.625rem;
   font-weight: 500;
   letter-spacing: 0.05em;
   text-transform: uppercase;
@@ -519,7 +519,7 @@ button.loading::before {
   transform: translateX(8px);
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   white-space: nowrap;
-  pointer-events: none;
+  cursor: pointer;
   order: -1;
 }
 
