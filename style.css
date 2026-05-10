@@ -1599,7 +1599,6 @@ h1 > span {
   grid-column: 1 / -1;
   margin-block-end: 12px;
   text-align: center;
-  font-size: clamp(1.5rem, 0.7rem + 3vw, 2.5rem);
 }
 
 .projects__item {

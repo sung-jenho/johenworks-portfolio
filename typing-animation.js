@@ -52,10 +52,10 @@ document.addEventListener('DOMContentLoaded', () => {
   
   if (typingElement) {
     const texts = [
-      'Front-end Developer',
+      'Software Developer',
       'UI/UX Designer',
-      'SQL Expert',
-      'Problem Solver'
+      'Automation Specialist',
+      'AI Engineer'
     ];
     
     new TypingAnimation(typingElement, texts, {
