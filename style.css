@@ -1501,15 +1501,15 @@ h1 > span {
 }
 
 .stats__number--complete {
-  animation: pulseGlow 2s ease-in-out infinite;
+  /* Glow effect removed */
 }
 
 @keyframes pulseGlow {
   0%, 100% {
-    text-shadow: 0 0 10px rgba(78, 255, 166, 0.3);
+    text-shadow: none;
   }
   50% {
-    text-shadow: 0 0 20px rgba(78, 255, 166, 0.6), 0 0 30px rgba(78, 255, 166, 0.3);
+    text-shadow: none;
   }
 }
 
