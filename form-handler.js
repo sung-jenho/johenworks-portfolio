@@ -7,12 +7,11 @@ class FormHandler {
     this.messageInput = document.getElementById('message');
     this.submitButton = this.form?.querySelector('button[type="submit"]');
     
-    // EmailJS Configuration
-    // IMPORTANT: Replace these with your actual EmailJS credentials
-    this.emailJSConfig = {
-      serviceID: 'service_t81ecyj',      // Get from EmailJS dashboard
-      templateID: 'template_89f5r7h',    // Get from EmailJS dashboard
-      publicKey: 'JHE_xEcbfVpwj4YEy'       // Get from EmailJS dashboard
+    // EmailJS Configuration - loaded from config file
+    this.emailJSConfig = window.EMAILJS_CONFIG || {
+      serviceID: 'YOUR_SERVICE_ID',
+      templateID: 'YOUR_TEMPLATE_ID',
+      publicKey: 'YOUR_PUBLIC_KEY'
     };
     
     this.init();

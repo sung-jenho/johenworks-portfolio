@@ -1,2 +1,6 @@
 
+
 assets/fonts/
+
+# EmailJS config (contains credentials)
+emailjs.config.js
