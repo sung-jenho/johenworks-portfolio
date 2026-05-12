@@ -1500,9 +1500,7 @@ h1 > span {
   transition: transform 0.3s ease;
 }
 
-.stats__number--complete {
-  /* Glow effect removed */
-}
+
 
 @keyframes pulseGlow {
   0%, 100% {
